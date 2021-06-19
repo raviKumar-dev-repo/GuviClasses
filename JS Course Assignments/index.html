@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Test Tutorial</title>
+
+</head>
+
+<body>
+
+    <input type="text" id="textVal" value = "default">
+    <button onclick="createHeading()"> Create Heading </button>
+    <div id="container">
+
+
+
+
+    </div>
+    <script>
+
+
+        console.log(window)
+        console.log(document)
+        //window and document type  
+
+
+
+        function createHeading(name) {
+
+            var nameVal = document.getElementById("textVal").value;
+            var heading1 = document.createElement("h1")
+            heading1.innerHTML = "Hello" + nameVal
+            var mydiv = document.getElementById("container")
+            mydiv.append(heading1)
+
+        }
+
+
+        var data = [2,4,6];
+        var resData = data.map(function(num){
+            return num*15  
+        })
+        // data.forEach (function(num){
+        //     console.log(num)
+
+        //     var res = num*10
+        //     resData.push(res)
+
+
+        // })
+
+
+        console.log(resData)
+
+
+    </script>
+</body>
+
+</html>
