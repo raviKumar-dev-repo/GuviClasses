@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Movies Table</title>
+
+</head>
+
+<body>
+
+    <div style="height: 100vh;width : 50%; float : left; background-color:MediumSpringGreen">
+        <h2 style="background: cornsilk; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI';
+         border: mediumspringgreen; color: midnightblue;"> Enter Table Values</h2>
+
+        <form onsubmit="handleSubmit(); return false;" id="form">
+
+            <label for="" style="color:midnightblue; font-weight: bold;">Movie Name</label><br>
+            <input type="text" id="name" value="test" style="display: grid; color: navy;">
+            <br>
+
+            <label for="" style="color:midnightblue; font-weight: bold;">Release Date</label><br>
+            <input type="text" id="date" value="test" style="display: grid; color: navy;"><br>
+
+            <label for="" style="color:midnightblue; font-weight: bold;">Rating</label><br>
+            <input type="text" id="rating" value="test" style="display: grid; color: navy;"><br><br>
+
+            <input type="submit" value="Submit" style="background-color: midnightblue; padding: 5px;
+             margin: 3px; display: grid;
+             color: mintcream;" id = "submitBtn">
+
+            <input type="submit" value="Update" style="background-color: lightblue; padding: 5px;
+            margin: 3px; display: grid;
+            color: mintcream;" id = "updateBtn" disabled>
+        </form>
+    </div>
+
+
+    <div style="height: 100vh;width : 50%; float : right; background-color:cornsilk">
+        <h2 style="background: MediumSpringGreen; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI';
+         border: mediumspringgreen; color: midnightblue;top: 0%; "> View Table Values</h2>
+
+        <table id="mvtable" style="width : 100%; color: rgb(7, 43, 29);border-style: groove;
+         border-color:midnightblue;">
+            <tr>
+                <th style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI'; 
+                color: midnightblue; border: 1px midnightblue; border-collapse: collapse;
+                padding: 5px; border-style: groove;  background-color: mediumspringgreen;">
+                    Name</th>
+
+                <th style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI'; 
+                    color: midnightblue; border: 1px midnightblue; border-collapse: collapse;
+                    padding: 5px; border-style: groove; background-color: mediumspringgreen;">
+                    Release Date</th>
+
+                <th style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI'; 
+                color: midnightblue; border: 1px midnightblue; border-collapse: collapse;
+                padding: 5px; border-style: groove;  background-color: mediumspringgreen;">
+                    Rating</th>
+            </tr>
+
+
+            <input type="button" id="editBtn" value="Edit Table" class="edit" onclick="editRow()" style="background-color: lightblue; padding: 5px;
+             margin: 3px; display: grid;
+             color: mintcream;" disabled>
+            <input type="button" id="dltBtn" ; value="Delete Rows" class="Delete" onclick="deleteRow()" style="background-color: lightblue; padding: 5px;
+             margin: 3px; display: grid;
+             color: mintcream;" dis>
+        </table>
+    </div>
+
+
+    <div style = "background: lightgreen;"></div> 
+    <h2 style="background: MediumSpringGreen; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI';
+    border: mediumspringgreen; color: midnightblue;top: 0%; "> Instructions</h2>
+    <ol>
+        <li>Click on Edit Button to enter EDIT MODE</li>
+        <li>Both Button Will get enabled only when there is some value in table to edit/delete</li>
+        <li>Click on Delete Button to enter DELETE MODE</li>
+        <li>Submit button will get disabled Once rows value are copied into form fields</li>
+        <li>As soon as new values are populated old row will be deleted and new row is created.</li>
+      </ol>
+
+    <script src="table.js"></script>
+
+</body>
+
+</html>
