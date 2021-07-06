@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>Birthday Timer</title>
+        <link rel="icon" href="favicon.png" type="image/png">
+        
+    </head>
+    <style>
+        .CustomLabel .items th {
+          padding: 0 3px 2px 3px;
+          text-align: left;
+          vertical-align: bottom;
+        }
+      
+        .CustomLabel .items td {
+          padding: 5px 4px;
+          font-size: 12px;
+        }
+      
+        .CustomLabel .items div.qty {
+          text-align: center;
+          border-radius: 50%;
+          font-size: 22px;
+          font-weight: bold;
+          border: 2px solid black;
+          width: 34px;
+          height: 34px;
+          line-height: 27px;
+        }
+      
+        .CustomLabel .items div.qty.qty-1 {
+          text-align: center;
+          padding: 0;
+          font-size: inherit;
+          font-weight: normal;
+          border: 0;
+        }
+      
+        .CustomLabel .items td.product-image {
+          width: 80px
+        }
+      
+        .CustomLabel .items td.product-barcode {
+          width: 140px
+        }
+      
+        .CustomLabel .items div.soh {
+          text-align: center;
+          border-radius: 50%;
+          font-size: 13px;
+          font-weight: bold;
+          border: 1px solid black;
+          width: 30px;
+          height: 30px;
+          line-height: 27px;
+        }
+      </style>
+    <body>
+
+        <div style="text-align:center; font-size:18px; font-weight:bold">Printed Pick List</div>
+        <div style="font-size:12px; padding-bottom:10px;">{{date}}</div>
+        <div style="width:180px; display:inline-block"></div>
+        <div style="display:inline-block; margin-left:20px; padding-left:20px; border-left: 1px solid silver; font-size:35px; line-height: 35px; vertical-align: middle;">Pick List</div>
+        <div style="margin-top:30px; font-weight:bold; font-size:16px;">Wave {{wave.id}}</div>
+        <div style="margin-top:10px">
+          <table class="items">
+            <tr style="font-size:15px">
+              <th>Qty</th>
+              <th>Size</th>
+              <th>Colour</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Dept</th>
+              <th>Item Code</th>
+              <th>SOH</th>
+              <th></th>
+              <th></th>
+            </tr>
+            {{#items}}
+              <tr style="border-top: 1px solid silver">
+                <td>
+                  <div class="qty qty-{{requiredQty}}">{{requiredQty}}</div>
+                </td>
+                <td style="text-align:center">{{sku.attributes.size}}</td>
+                <td>{{sku.attributes.colour}}</td>
+                <td>{{sku.name}}</td>
+                <td>${{sku.orderPriceWithTax}}</td>
+                <td>{{sku.category.name}}</td>
+                <td>{{sku.skuRef}}</td>
+                <td>
+                  <div class="soh">{{sku.onHand}}</div>
+                </td>
+                <td class="product-image"><img src="{{sku.imageUrlRef}}"/></td>
+                <td class="product-barcode">
+                  <div style="text-align:center">
+                    <img class="barcode" style="height:100%" jsbarcode-fontsize="15'jsbarcode-width="1" jsbarcode-height="50" jsbarcode-value="{{sku.references.BARCODE}}"/>
+                  </div>
+                </td>
+              </tr>
+            {{/items}}
+          </table>
+        </div>
+
+
+    </body>
+</html>
