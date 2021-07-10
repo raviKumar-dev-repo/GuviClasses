@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style>
+        .CustomLabel {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 50px;
+
+        }
+
+        .CustomLabel .items {
+            padding: 3px 5px;
+            border: black;
+            border-collapse: collapse;
+            width: 100%;
+            margin-left: 20px;
+            border-radius: 3px;
+            vertical-align: bottom;
+        }
+
+
+        .CustomLabel .items th {
+            text-align: left;
+            color: white;
+            height: 30px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-align: center;
+            vertical-align: bottom;
+            background: black;
+            border-collapse: collapse;
+            border-bottom: 3px solid grey;
+
+        }
+
+        .CustomLabel .items td {
+            padding: 5px 4px;
+            font-size: 14px;
+            border-bottom: 3px solid grey;
+
+        }
+
+        .CustomLabel items.tr:hover {
+            background-color: #ddd;
+        }
+
+        .CustomLabel .items div.qty {
+            text-align: center;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: bold;
+            border: 2px solid black;
+            width: 34px;
+            height: 34px;
+            line-height: 27px;
+        }
+
+        .CustomLabel .items td.product-image {
+            width: 140px
+        }
+
+        .CustomLabel .items div.qty.qty-1 {
+            text-align: center;
+            padding: 0;
+            font-size: inherit;
+            font-weight: normal;
+            border: 0;
+        }
+
+        .CustomLabel .items td.product-barcode {
+            width: 140px
+        }
+    </style>
+
+
+</head>
+
+<body class="CustomLabel">
+
+    <div style="text-align:center; font-size:18px; font-weight:bold">Printed Pick List</div>
+    <div style="font-size:18px; padding-bottom:10px;">{{date}}</div>
+    <div style="width:180px; display:inline-block"></div>
+    <div style="display:inline-block; margin-left:20px; padding-left:20px; border-left: 3px solid black; 
+        font-size:35px; line-height: 35px; vertical-align: middle;">Pick List</div>
+    <div style="margin-top:30px; font-weight:bold; font-size:16px;">Wave {{wave.id}}</div>
+    <div style="margin-top:20px; font-weight:bold; font-size:16px;">Banner : {{wave.retailer.ref}}</div><br>
+    <div style="margin-top:20px; margin-left: ;">
+        <table class="items">
+            <tr style="font-size:15px">
+                <th>SKU</th>
+                <th>Style</th>
+                <th>Size</th>
+                <th>Colour</th>
+                <th>Product Image</th>
+                <th>MH</th>
+                <th>DCS</th>
+                <th>UPC</th>
+                <th>Qty</th>
+
+            </tr>
+            {{#items}}
+            <tr style="border-top: 2px solid silver">
+                <td style="text-align:left">{{sku.ref}}</td>
+                <td style="text-align:left">{{sku.attributes.StyleDesc}}</td>
+                <td style="text-align:left">{{sku.attributes.SizeDesc}}</td>
+                <td style="text-align:left">{{sku.attributes.Color}}</td>
+                <td class="product-image"><img src="{{sku.attributes.ImageURL}}" /></td>
+                <td style="text-align:left">{{sku.attributes.MerchGroup}}</td>
+                <td style="text-align:left">{{sku.attributes.MerchClass}}</td>
+                <td class="product-barcode">
+                    <div style="text-align:center">
+                        <img class="barcode" style="height:100%" jsbarcode-fontsize="15" jsbarcode-width="1"
+                            jsbarcode-height="50" jsbarcode-value="{{sku.attributes.UPCCode}}" />
+                    </div>
+                </td>
+                <td>
+                    <div class="qty qty-{{requiredQty}}">{{requiredQty}}</div>
+                </td>
+            </tr>
+            {{/items}}
+        </table>
+    </div>
+
+
+</body>
+
+</html>

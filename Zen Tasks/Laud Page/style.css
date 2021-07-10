@@ -1,3 +1,187 @@
-*{
-    background-color: teal;
+/* Customize stlye for page's header , to make it full width */
+.page-header {
+    height: 100vh;
+    max-height: 1050px;
+    padding: 0;
+    color: #FFFFFF;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Customize stlye for page's header's image */
+.page-header .page-header-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Customize stlye for quote banner on the about page*/
+.banner-container {
+    background-size: cover;
+    margin-top: 2%;
+    background-position: center center;
+    background-color: slategrey;
+    color: white;
+    margin-left: 0;
+    position: static;
+    margin-right: 0;
+    width: 100%;
+
+}
+
+/* Customize stlye for page's header profile image */
+.cc-profile-image a {
+    position: relative;
+}
+
+/* Customize stlye for anything before page's image */
+.cc-profile-image a:before {
+    content: "";
+    border: 15px solid rgba(55, 140, 63, 0.6);
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    left: 0;
+    -webkit-animation: pulsate 1.6s ease-out;
+    animation: pulsate 1.6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    opacity: 0.0;
+    z-index: 99;
+}
+
+/* Customize stlye for profile image img element */
+.cc-profile-image img {
+    position: relative;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    border: 15px solid transparent;
+    z-index: 9999;
+    transition: all .3s ease-out;
+}
+
+/* Customize stlye for profile image hover effect */
+.cc-profile-image a:hover img {
+    transform: scale(1.16, 1.16);
+}
+
+.cc-profile-image a:hover:before {
+    -webkit-animation: none;
+    animation: none;
+}
+
+/* Customize stlye for all image button  */
+.button-container {
+    text-align: center;
+    color: lightblue;
+}
+
+.button-container .btn-default {
+    margin-right: 8px;
+    border: 10px black;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.button-container .btn-default:hover {
+    color: mediumaquamarine;
+    background-color: mintcream;
+    box-shadow: slategray;
+}
+
+/* award image styling */
+.award-image img {
+    position: absolute;
+    border-radius: 30%;
+    height: 150px;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    border: 15px solid transparent;
+    z-index: 9999;
+    transition: all .3s ease-out;
+    background-color: rgba(31, 38, 44, 0.171);
+    margin-left: 0;
+}
+
+.award-image {
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding-left: 10px;
+    margin-right: 50px;
+
+}
+
+/* style for wikipedia button */
+#wiki {
+    background-color: grey;
+    align-content: center;
+    display: inline-flex;
+    margin: 0 10px 0 0;
+}
+
+/* style for amazon button */
+#amzn {
+    background-color: burlywood;
+    align-content: center;
+    display: inline-flex;
+    margin: 0 10px 0 0;
+}
+
+/* style for google button */
+#google {
+    background-color: ghostwhite;
+    align-content: center;
+    display: inline-flex;
+    margin: 0 10px 0 0;
+}
+
+/* style for youtube button */
+#utube {
+    background-color: rgb(235, 50, 50);
+    align-content: center;
+    display: inline-flex;
+    margin: 0 10px 0 0;
+}
+
+/* style for wikipedia button */
+.navbar-nav li a {
+    font-weight: 500;
+    font-size: large;
+    color: white;
+
+}
+
+/* style for navigation bar section*/
+.navbar-nav li a:hover {
+    color: mediumspringgreen;
+    font-weight: 800;
+    border-radius: 20%;
+    box-shadow: 0 5px 5px rgba(92, 231, 201, 0.925);
+
+}
+
+/* Styling for footer element */
+#footer {
+    background-color: rgb(59, 89, 122);
+    border-radius: 5%;
+    color: honeydew;
+    margin-top: 120px;
+    padding: 0px;
+}
+
+/* stlying the section where all awards are listed */
+#allawards {
+    margin-top: 5%;
+    background-image: url("img/rocketbanner.jpg")
 }
