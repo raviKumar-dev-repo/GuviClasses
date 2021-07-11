@@ -183,5 +183,10 @@
 /* stlying the section where all awards are listed */
 #allawards {
     margin-top: 5%;
-    background-image: url("img/rocketbanner.jpg")
+    background-image: url("img/rocketbanner.jpg");
+    
+}
+
+#award1::after{
+    color: red;
 }

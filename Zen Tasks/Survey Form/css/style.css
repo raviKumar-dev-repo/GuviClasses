@@ -2,7 +2,7 @@
 		Font, Alignment */
 body {
     background-color: lightgray;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+    font-family: 'Segoe UI';
     text-align: center;
     font-weight: 300;
 }
@@ -109,7 +109,7 @@ form {
     white-space: nowrap;
     cursor: pointer;
     font-size: 30px;
-    color: #ccc;
+    color: rgb(109, 106, 65);
 }
 
 .rate:not(:checked)>label:before {
@@ -124,15 +124,6 @@ form {
 .rate:not(:checked)>label:hover~label {
     color: #deb217;
 }
-
-.rate>input:checked+label:hover,
-.rate>input:checked+label:hover~label,
-.rate>input:checked~label:hover,
-.rate>input:checked~label:hover~label,
-.rate>label:hover~input:checked~label {
-    color: #c59b08;
-}
-
 
 /* Styling submit Button */
 #button {
@@ -241,8 +232,28 @@ form {
 
 }
 /* Styling for adding required filed with '*' */
-.from .form-control label.required:after{
+/* .form-control .name label.required{
     color:red;
     content: " *";
 
+} */
+/* 
+#Name label.required :after{
+
+    color:red;
+    content: "# *";
+} */
+
+.name::after{
+    color:red;
+    content: " *";
+}
+.email::after{
+    color:red;
+    content: " *";
+}
+
+.expr::after{
+    color:red;
+    content: " *";
 }

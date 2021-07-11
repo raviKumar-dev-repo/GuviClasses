@@ -16,10 +16,11 @@
 
     <form id="form" action="output.html">
 
-        <div class="form-control">
+        <div class="form-control" id="formCtrl">
             <label for="name" id="Name" class="name" required="required">Name </label><br>
-            <input type="text" id="fname" name="firstname" placeholder="First Name" id="fname">
-            <input type="text" id="lname" name="lastname" placeholder="Last Name" id="lname"><br><br>
+            <input type="text" id="fname" name="firstname" placeholder="First Name" id="fname" required="required">
+            <input type="text" id="lname" name="lastname" placeholder="Last Name" id="lname"
+                required="required"><br><br>
         </div>
 
         <div class="form-control"></div>
@@ -30,7 +31,7 @@
 
 
         <div class="form-control">
-            <label for="expr" id="expr" class="expr">Your Experience</label><br>
+            <label for="expr" id="expr" class="expr" required="required">Your Experience</label><br>
 
             <div class="rate">
                 <input type="radio" id="star5" name="rate" value="5" />
