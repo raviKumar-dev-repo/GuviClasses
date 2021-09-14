@@ -1,0 +1,40 @@
+<!-- Exercise to show content changing dynamicqlly using DOM-M -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fetch API Sandbox</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body> 
+
+        <button id = "getText" onclick="getTextOnClick()">Get Text</button>
+        <button id = "getUsers" onclick="getUsersOnClick()">Get Users</button>
+        <button id = "getPosts" onclick="getPostsOnClick()">Get Posts API</button>
+
+        <div id="output">
+        </div>
+        <form id ="addPost">
+            <div>
+                <input type="text" id="title" placeholder="Title">
+            </div>
+            <div>
+                <textarea id ="body" placeholder="Body"></textarea>
+            </div>
+            
+            <input type="button" value="Submit" id = "addPostBtn" onclick="addPostsOnSubmit()">
+
+        </form>
+       
+
+
+        
+       
+        <script src="script.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+.listitem {
+    color: rgb(76, 19, 155);
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 20px;
+    background-color: rgb(159, 200, 204);
+    width: 300px;
+  }
+  img {
+    width: 20%;
+    border-radius: 50%;
+  }

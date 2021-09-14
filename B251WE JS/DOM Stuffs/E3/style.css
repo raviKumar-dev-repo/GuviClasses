@@ -1,0 +1,55 @@
+body {
+    background-image: linear-gradient(to left, rgb(122, 235, 182), green, rgb(126, 231, 231));
+    height:100%;
+    margin:0;
+}
+
+.container {
+    color: mediumblue;
+    margin-left: 100px;
+    border: black 5px;
+
+}
+
+.container h1 {
+    color: darkblue;
+    font-family: sans-serif;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+sinput[type="text"] {
+
+    border: black 5px;
+    border-radius: 10px;
+    border-bottom: 5px darkblue;
+    color: darkslategray;
+    margin-bottom: 5px;
+}
+
+.button {
+
+    border-radius: 10px;
+    border: 4px blue;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: lightseagreen;
+    font-weight: 600;
+
+
+}
+
+.list {
+
+    margin-top: 40px;
+
+}
+
+.list li {
+    border: 1px darkblue;
+    width: 400px;
+    padding: 10px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: medium;
+}
